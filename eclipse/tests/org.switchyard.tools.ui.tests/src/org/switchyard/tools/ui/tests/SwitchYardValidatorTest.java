@@ -79,12 +79,12 @@ public class SwitchYardValidatorTest extends AbstractMavenProjectTestCase {
 
         ensureMarkersCleanedOnProjectClean(project);
 
-        ensureValidationErrorFoundAfterFullBuild(project, switchYardFile, 24);
+        ensureValidationErrorFoundAfterFullBuild(project, switchYardFile, 23);
         
         MavenPlugin.getProjectConfigurationManager().updateProjectConfiguration(project, monitor);
         ensureMarkersCleanedOnProjectClean(project);
 
-        ensureValidationErrorFoundAfterFullBuild(project, switchYardFile, 24);
+        ensureValidationErrorFoundAfterFullBuild(project, switchYardFile, 23);
     }
 
     /**
