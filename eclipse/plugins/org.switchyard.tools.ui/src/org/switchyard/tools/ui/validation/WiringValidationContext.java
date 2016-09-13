@@ -262,7 +262,8 @@ final class WiringValidationContext {
                             _serviceInterfaces.put((Contract) eobject, si);
                         }
                     } catch (Exception e) {
-                    	Activator.getDefault().getLog().log(new Status(IStatus.INFO, Activator.PLUGIN_ID, "Service Interface cannot be loaded.", e)); //$NON-NLS-1$
+                       
+                        Activator.getDefault().getLog().log(new Status(IStatus.INFO, Activator.PLUGIN_ID, "Service Interface cannot be loaded.", e)); //$NON-NLS-1$
                         if (e instanceof RuntimeException) {
                             String message = e.getMessage();
                             if (message != null && message.startsWith("SWITCHYARD010004")) { //$NON-NLS-1$
